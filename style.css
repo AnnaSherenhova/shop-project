@@ -266,16 +266,17 @@ form{
 
 .main{
     min-width: 1200px;
-    background-color: rgba(35, 90, 147, 0.25);
     border-bottom: 1px solid white;
 }
 
-
-.slider{
+.slider-box{
+    background-color: rgba(35, 90, 147, 0.25);
     height: 400px;
     line-height: 400px;
     text-align: center;
+    border-bottom: 1px solid white;
 }
+
 
 .text{
     color: white;
