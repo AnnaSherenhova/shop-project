@@ -37,11 +37,11 @@ body{
 } 
 
 .col-1 {
-    width: 8.3333%;
+    width: 8.33333%;
 }
 
 .col-2 {
-    width: 16.6666%;
+    width: 16.66667%;
 }
 
 .col-3{
@@ -49,7 +49,7 @@ body{
 }
 
 .col-4 {
-    width: 33.3333%;
+    width: 33.33333%;
 }
 
 .col-5 {
@@ -65,7 +65,7 @@ body{
 }
 
 .col-8 {
-    width: 66.6666%;
+    width: 66.66667%;
 }
 
 .col-9 {
@@ -110,14 +110,14 @@ body{
     color: white;
 } 
 
-li:hover > .menu-link{
+.menu li:hover > .menu-link{
     background-color: #2c71b8;
     color: white;
 }
 
 /*arrow down*/
 
-.fa:hover {
+.fa-angle-down:hover {
     color: white;
 }
 
@@ -269,14 +269,41 @@ form{
     border-bottom: 1px solid white;
 }
 
-.slider-box{
-    background-color: rgba(35, 90, 147, 0.75);
+.slider-box {
+background-color: rgba(35, 90, 147, 0.75);
     height: 400px;
     line-height: 400px;
     text-align: center;
     border-bottom: 1px solid white;
 }
 
+.arrow{
+    position: relative;
+    top: 175px;
+    width: 50px;
+    height: 50px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+}
+.left{ 
+    transform: rotate(-135deg);
+}
+
+.right{
+    transform: rotate(45deg);
+}
+
+
+/*
+.fa-angle-left {
+    font-size: 100px;
+    color: white;
+}
+
+.fa-angle-right{
+    color: white;
+}
+*/
 
 .text{
     color: white;
@@ -304,14 +331,18 @@ form{
     padding-bottom: 30px;
 }
 
-.main-header-link{
+.main-header-text{
+    display: inline;
     color: white;
     font-size: 14px;
     font-weight: 300;
     text-decoration: none;
 }
 
-.laptop{
+.main-header-link {
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
     text-decoration: underline;
 }
 
@@ -321,19 +352,13 @@ form{
     font-weight: 300;
 }
 
-.title-box {
-
-}
-
 .title{
     color: white;
     font-size: 48px;
     font-weight: bold;
 }
 
-.sort-box{
-
-}
+/*sort menu*/
 
 .sort-menu{
     list-style-type: none;
@@ -347,6 +372,13 @@ form{
     width: 270px;
     height: 40px;
     line-height: 40px;
+    padding-left: 20px;
+}
+
+.sort-menu li:hover{
+    background-color: white;
+    display: block;
+
 }
 
 .sort-menu > li > a{
@@ -355,11 +387,48 @@ form{
     font-size: 21px;
 }
 
+.sort-menu > li:hover > a {
+    color: #2c71b8;
+}
 
+.sort-menu li:hover > .sort-submenu{
+    display: block;
+}
 
+.sort-submenu{
+    list-style-type: none;
+    position: absolute;
+    display: none;
+    top: 39px;
+    left: -1px;
+    z-index: 1;
+}
 
+.sort-submenu > li{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    background-color: #2c71b8;
+    width: 270px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+}
 
+.sort-submenu > li{
 
+}
+
+.sort-submenu > li > a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+}
+
+.sort-submenu li:hover a {
+    color: #2c71b8;
+}
 
 /*main contant*/
 
@@ -373,62 +442,9 @@ form{
     height: 179px;
     background-color: rgba(205, 221, 238, 0.75);
     position: relative;
-
+    text-align: center;
+    padding-top: 45px;
 } 
-
-.one{
-    background-image: url(images/monitor.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.two{
-    background-image: url(images/device.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.three {
-    background-image: url(images/watch.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.four {
-    background-image: url(images/laptop.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.five {
-    background-image: url(images/player.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.six {
-    background-image: url(images/mobile.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.seven {
-    background-image: url(images/tablet.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.eight {
-    background-image: url(images/device2.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.nine {
-    background-image: url(images/watch2.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
 
 .scan{
     position: absolute;
@@ -448,6 +464,13 @@ form{
     border: 1px solid #2c71b8;
 }
 
+.scan-btn:hover{
+    background: #2c71b8;
+    background-image: url(images/scan-white.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .heart {
     position: absolute;
     top: 50px;
@@ -464,6 +487,13 @@ form{
     padding: 0;
     cursor: pointer;
     border: 1px solid #2c71b8;
+}
+
+.heart-btn:hover {
+    background: #2c71b8;
+    background-image: url(images/heart-white.png);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .content-text{
@@ -565,20 +595,19 @@ form{
 }
 
 
+/*footer*/
 
-
-
-
-
-
-
-
-
-
-
-
-/*
 .footer{
+    min-width: 1200px;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 25px 0;
+}
+
+.footer-text-box{
+    text-align: center;
+}
+
+.footer-text{
+    font-size: 21px;
+    color: #2c71b8;
 }
